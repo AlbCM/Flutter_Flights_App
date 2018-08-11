@@ -1,0 +1,15 @@
+/*AppBar(
+              backgroundColor: Colors.white,
+              toolbarOpacity: 1.0,
+               flexibleSpace: SafeArea(
+              child: TabBar(
+                tabs: [
+                  Tab(
+                      icon: Icon(
+                    Icons.flight,
+                    color: Colors.deepPurple,
+                  )),
+                  Tab(icon: Icon(Icons.train, color: Colors.deepPurple)),
+                  Tab(icon: Icon(Icons.traffic, color: Colors.deepPurple))
+                ],
+              ))),*/
