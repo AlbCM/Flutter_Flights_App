@@ -1,0 +1,28 @@
+/*AppBar(
+              backgroundColor: Colors.white,
+              toolbarOpacity: 1.0,
+               flexibleSpace: SafeArea(
+              child: TabBar(
+                tabs: [
+                  Tab(
+                      icon: Icon(
+                    Icons.flight,
+                    color: Colors.deepPurple,
+                  )),
+                  Tab(icon: Icon(Icons.train, color: Colors.deepPurple)),
+                  Tab(icon: Icon(Icons.traffic, color: Colors.deepPurple))
+                ],
+              ))),*/
+
+
+
+  /*BoxDecoration gradient() {
+    var lGradient = new BoxDecoration(
+        gradient: LinearGradient(
+            begin: FractionalOffset.topLeft,
+            end: FractionalOffset.bottomRight,
+            stops: [0.0, 1.0],
+            colors: [const Color(0xFF915FB5), const Color(0xFFCA436b)],
+            tileMode: TileMode.repeated));
+    return lGradient;
+  }*/
