@@ -94,14 +94,14 @@ class SearchScreen extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0)),
                 child: new Column(
-                  children: <Widget>[bodyTapBar(), bodyCard()],
+                  children: <Widget>[bodyTapBar(), bodyCard(), bodyCard(), bodyCard(),bodyCard(),bodyCard(), bodyCard()],
                 ))));
     return bContainer;
   }
 
   Widget bodyTapBar() {
     var bContent = Container(
-        padding: const EdgeInsets.only(top: 20.0),
+        padding: const EdgeInsets.only(top: 10.0),
         child: Row(
           children: <Widget>[
             new Expanded(
@@ -123,7 +123,7 @@ class SearchScreen extends StatelessWidget {
                         ),
                         Text(" \$219",
                             style: TextStyle(
-                                color: Colors.purple[600], fontSize: 18.0))
+                                color: Colors.purple[600], fontSize: 16.0))
                       ],
                     ),
                   )
@@ -140,11 +140,11 @@ class SearchScreen extends StatelessWidget {
                         Icon(
                           Icons.directions_railway,
                           color: Colors.black26,
-                          size: 25.0,
+                          size: 20.0,
                         ),
                         Text(" \$102",
                             style: TextStyle(
-                                color: Colors.black26, fontSize: 18.0))
+                                color: Colors.black26, fontSize: 16.0))
                       ],
                     ),
                   )
@@ -165,7 +165,7 @@ class SearchScreen extends StatelessWidget {
                         ),
                         Text(" \$74",
                             style: TextStyle(
-                                color: Colors.black26, fontSize: 18.0))
+                                color: Colors.black26, fontSize: 16.0))
                       ],
                     ),
                   ),
@@ -179,49 +179,58 @@ class SearchScreen extends StatelessWidget {
 
   Widget bodyCard() {
     var card = Container(
-      padding: const EdgeInsets.only(top: 20.0, bottom: 20.0, left: 20.0),
+      padding: const EdgeInsets.only(top: 14.0, bottom: 15.0, left: 0.0),
       child: new Center(
           child: Row(
         children: <Widget>[
-          new Expanded(
-            child: Row(
-              children: <Widget>[
-                Icon(
-                  Icons.arrow_drop_down,
-                  color: Colors.black26,
-                ),
-                Column(
-                  children: <Widget>[
-                    Text(
-                      "6:00 am",
-                      style: TextStyle(color: Colors.black45, fontSize: 18.0),
-                    ),
-                    Text(
-                      "O' hare",
-                      style: TextStyle(color: Colors.black26),
-                    )
-                  ],
-                ),
-                Icon(Icons.flight, color: Colors.black26),
-                Column(
-                  children: <Widget>[
-                    Text(
-                      "8:25 am",
-                      style: TextStyle(color: Colors.black45, fontSize: 18.0),
-                    ),
-                    Text(
-                      "Tacoma intl.",
-                      style: TextStyle(color: Colors.black26),
-                    )
-                  ],
-                ),
-                Text(
-                  "\$ 219",
-                  style: TextStyle(color: Colors.black45, fontSize: 16.0),
-                )
-              ],
-            ),
-          )
+          Row(
+            children: <Widget>[
+              Container(
+                  padding: const EdgeInsets.only(right: 5.0),
+                  child: Icon(
+                    Icons.arrow_drop_down,
+                    color: Colors.black26,
+                  )),
+              Container(
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "6:00 am",
+                        style: TextStyle(color: Colors.black45, fontSize: 16.0),
+                      ),
+                      Text(
+                        "O' hare",
+                        style: TextStyle(color: Colors.black26),
+                      )
+                    ],
+                  )),
+              Container(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Icon(Icons.flight, color: Colors.black26, size: 20.0,),
+              ),
+              Column(
+                children: <Widget>[
+                  Text(
+                    "8:25 am",
+                    style: TextStyle(color: Colors.black45, fontSize: 16.0),
+                  ),
+                  Text(
+                    "Tacoma intl.",
+                    style: TextStyle(color: Colors.black26),
+                  )
+                ],
+              ),
+              Container(
+                padding: const EdgeInsets.only(left:65.0),
+                child: Text(
+                "\$ 219",
+                style: TextStyle(color: Colors.black45, fontSize: 16.0),
+              ),
+              ),
+              
+            ],
+          ),
         ],
       )),
     );
