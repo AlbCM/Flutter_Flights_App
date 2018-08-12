@@ -12,6 +12,7 @@
                   Tab(icon: Icon(Icons.train, color: Colors.deepPurple)),
                   Tab(icon: Icon(Icons.traffic, color: Colors.deepPurple))
                 ],
+<<<<<<< HEAD
               ))),*/
 
 
@@ -26,3 +27,6 @@
             tileMode: TileMode.repeated));
     return lGradient;
   }*/
+=======
+              ))),*/
+>>>>>>> a3ea99fc467cce651be54c7b23431bd218fc4fa0
