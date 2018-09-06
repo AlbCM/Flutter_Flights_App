@@ -5,11 +5,11 @@ void main() => runApp(new FlightsApp());
 /*TODO:
   - Cambiar fuente
   - Arreglar el tabbar
-    - Espacio
-    - Borde
-    - Agregar precio de pasaje en el icono
-  - Agregar content
+    - Scroll nested
+    - Expantion panel
+  - Agregar buttom
   - Agregar borde a la imagen
+  - Agregar gradient
 
 */
 // Parametros de la app
@@ -94,7 +94,7 @@ class SearchScreen extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0)),
                 child: new Column(
-                  children: <Widget>[bodyTapBar(), bodyCard(), bodyCard(), bodyCard(),bodyCard(),bodyCard(), bodyCard()],
+                  children: <Widget>[bodyTapBar(), listView()],
                 ))));
     return bContainer;
   }
@@ -120,6 +120,7 @@ class SearchScreen extends StatelessWidget {
                           Icons.flight,
                           color: Colors.purple[600],
                           size: 25.0,
+                          
                         ),
                         Text(" \$219",
                             style: TextStyle(
@@ -177,9 +178,24 @@ class SearchScreen extends StatelessWidget {
     return bContent;
   }
 
+  Widget listView() {
+    var lView = Container(
+      child: new Center(
+          child: new ListView(
+        shrinkWrap: true,
+        padding: const EdgeInsets.all(12.0),
+        children: <Widget>[
+          bodyCard(),
+         
+        ],
+      )),
+    );
+    return lView;
+  }
+
   Widget bodyCard() {
     var card = Container(
-      padding: const EdgeInsets.only(top: 14.0, bottom: 15.0, left: 0.0),
+      padding: const EdgeInsets.only(top: 5.0, bottom: 15.0, left: 0.0),
       child: new Center(
           child: Row(
         children: <Widget>[
@@ -207,7 +223,11 @@ class SearchScreen extends StatelessWidget {
                   )),
               Container(
                 padding: const EdgeInsets.only(right: 10.0),
-                child: Icon(Icons.flight, color: Colors.black26, size: 20.0,),
+                child: Icon(
+                  Icons.flight,
+                  color: Colors.black26,
+                  size: 20.0,
+                ),
               ),
               Column(
                 children: <Widget>[
@@ -222,13 +242,12 @@ class SearchScreen extends StatelessWidget {
                 ],
               ),
               Container(
-                padding: const EdgeInsets.only(left:65.0),
+                padding: const EdgeInsets.only(left: 40.0),
                 child: Text(
-                "\$ 219",
-                style: TextStyle(color: Colors.black45, fontSize: 16.0),
+                  "\$ 219",
+                  style: TextStyle(color: Colors.black45, fontSize: 16.0),
+                ),
               ),
-              ),
-              
             ],
           ),
         ],
